@@ -20,7 +20,7 @@ export function Navbar() {
           <div className="flex-shrink-0">
             <Link href="/" className="flex-shrink-0 inline-flex items-center">
             <Image
-              src="/img/home/fplogo2.svg"
+              src="/img/home/fpLogo2.svg"
               alt="Company Logo"
               width={160}
               height={40}

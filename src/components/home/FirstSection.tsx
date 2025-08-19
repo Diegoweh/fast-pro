@@ -23,7 +23,7 @@ export default function FirstSection({
           </h1>
 
           <p className="text-base md:text-lg text-center lg:text-left mb-4 lg:mb-3">
-            At Fast Pro Bags and Textiles, Inc., as a founder of the industry since 1969, we don&apos;t just manufacture industrial packaging, we engineer solutions. Historically trusted by industry leaders for our proven quality, dedicated technical services, engineering design & support, we are your trusted partner in delivering custom FIBCs and industrial textiles.  Backed by deep industry expertise, agile North American manufacturing, and a dedicated engineering team, we produce high-quality bulk bags and textiles with unmatched speed and precision. Count on us to deliver exactly what you need.
+            At Fast Pro Bags and Textiles, Inc., as a founder of the industry since 1969, we don&apos;t just manufacture industrial packaging, we engineer solutions. Historically trusted by industry leaders for our proven quality, dedicated technical services, engineering design &amp; support, we are your trusted partner in delivering custom FIBCs and industrial textiles.  Backed by deep industry expertise, agile North American manufacturing, and a dedicated engineering team, we produce high-quality bulk bags and textiles with unmatched speed and precision. Count on us to deliver exactly what you need.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-2 justify-center lg:justify-start mb-4 lg:mb-3">

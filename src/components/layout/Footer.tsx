@@ -63,7 +63,7 @@ export default function Footer() {
           {/* Subscribe */}
           <div className="md:col-span-2">
             <h6 className="uppercase text-[#1a4db3] tracking-wide text-sm font-semibold">
-              new products & promotions
+              new products &amp; promotions
             </h6>
             <p className="text-sm md:text-base mb-3" style={{ color: "#eb7700" }}>
               Sign up to receive email updates on new products announcements and special promotions.

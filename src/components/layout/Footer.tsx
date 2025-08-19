@@ -19,7 +19,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="py-6 bg-neutral-100 border-t">
+    <footer className="py-6 bg-slate-200 border-t">
       <div className="max-w-7xl mx-auto px-3">
         <div className="py-6">
             <Image

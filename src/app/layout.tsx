@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import SupernavBar from "@/components/layout/SupernavBar";
+import { Navbar } from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import HeaderSlider from "@/components/layout/HeaderSlide";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +31,34 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <SupernavBar/>
+        <Navbar/>
+        {/* HeaderSlider */}
+        <HeaderSlider
+          heightClass="h-[60vh] md:h-[80vh]"
+          slides={[
+            {
+              src: "/img/home/fpHeader.webp",
+              alt: "Bags manufacturing",
+              title1: "FastPro",
+              title2: "Tariffs Continue at 0%",
+              paragraph: "Our products are exempt under the United States/Mexico/Canada Agreement (USMCA) and Tratado Mexico Estados Unidos Canada (T-MEC).",
+            },
+            {
+              src: "/img/home/fpHeader2.webp",
+              title1: "FastPro",
+              title2: "Tariffs Continue at 0%",
+              paragraph: "Our products are exempt under the United States/Mexico/Canada Agreement (USMCA) and Tratado Mexico Estados Unidos Canada (T-MEC).",
+            },
+            {
+              src: "/img/home/fpHeader3.webp",
+              title1: "FastPro",
+              title2: "Tariffs Continue at 0%",
+              paragraph: "Our products are exempt under the United States/Mexico/Canada Agreement (USMCA) and Tratado Mexico Estados Unidos Canada (T-MEC).",
+            },
+          ]} />
         {children}
+        <Footer />
       </body>
     </html>
   );

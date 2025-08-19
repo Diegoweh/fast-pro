@@ -31,7 +31,7 @@ export default function AboutInfoSections() {
                 <span style={{ color: "#eb7700" }}> What We Do</span>
               </h5>
               <p className="mt-2 text-sm text-gray-600">
-                Headquartered in Richardson, TX, Fast Pro Bags and Textiles, Inc. delivers quality FIBCs and industrial fabrics for efficient supply chain solutions. We’re driven by a clear purpose: to manufacture products that exceed expectations—built for performance, with rapid delivery and unparalleled flexibility. Thanks to our North American manufacturing facilities in Mexico, we offer industry-leading lead times, even for small production runs and highly customized orders. Whether it's bulk bags, industrial textiles, or FIBC products, our experienced engineers are committed to delivering high-quality, tailor-made solutions that excel in even the most demanding environments.
+                Headquartered in Richardson, TX, Fast Pro Bags and Textiles, Inc. delivers quality FIBCs and industrial fabrics for efficient supply chain solutions. We&rsquo;re driven by a clear purpose: to manufacture products that exceed expectations—built for performance, with rapid delivery and unparalleled flexibility. Thanks to our North American manufacturing facilities in Mexico, we offer industry-leading lead times, even for small production runs and highly customized orders. Whether it's bulk bags, industrial textiles, or FIBC products, our experienced engineers are committed to delivering high-quality, tailor-made solutions that excel in even the most demanding environments.
               </p>
             </div>
           </div>

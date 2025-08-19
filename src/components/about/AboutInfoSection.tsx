@@ -51,7 +51,7 @@ export default function AboutInfoSections() {
               <p className="mt-2 text-sm text-gray-600">
                 Headquartered in Richardson, TX, Fast Pro Bags and Textiles, Inc. delivers innovative
                 packaging systems and efficient supply chain solutions tailored for the bulk bag
-                industry. We’re driven by a clear purpose: to manufacture products that exceed
+                industry. We&rsquo;re driven by a clear purpose: to manufacture products that exceed
                 expectations—built for performance, with rapid delivery and unparalleled flexibility.
                 Thanks to our North American manufacturing facilities in Mexico, we offer industry-leading
                 lead times, even for small production runs and highly customized orders. Whether it's bulk

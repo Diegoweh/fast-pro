@@ -1,6 +1,8 @@
 "use client"
 
 import { useState } from "react"
+import Link from "next/link";
+import Image from "next/image";
 import { Menu, X, ChevronDown, Search } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
@@ -16,9 +18,16 @@ export function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="/">
-            <img src="/img/home/fplogo2.svg" alt="Company Logo" className="h-10 w-auto" />
-            </a>
+            <Link href="/" className="flex-shrink-0 inline-flex items-center">
+            <Image
+              src="/img/home/fplogo2.svg"
+              alt="Company Logo"
+              width={160}
+              height={40}
+              className="h-10 w-auto"
+              priority
+            />
+          </Link>
           </div>
 
           {/* Desktop Navigation */}

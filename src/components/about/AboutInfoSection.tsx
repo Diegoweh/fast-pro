@@ -1,6 +1,5 @@
 // app/about/AboutInfoSections.tsx
 import Image from "next/image";
-import HeaderSlider from "../layout/HeaderSlide";
 
 export default function AboutInfoSections() {
   return (

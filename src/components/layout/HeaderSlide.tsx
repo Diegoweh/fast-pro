@@ -164,38 +164,3 @@ export default function HeaderSlider({
   );
 }
 
-/*
-USAGE EXAMPLE
--------------
-
-import HeaderSlider from "./HeaderSlider";
-
-export default function Hero() {
-  return (
-    <HeaderSlider
-      heightClass="h-[60vh] md:h-[80vh]"
-      slides={[
-        {
-          src: "/img/hero/slide1.jpg",
-          alt: "Bags manufacturing",
-          title1: "Premium custom",
-          title2: "Bags & Textiles",
-          paragraph: "End-to-end solutions with FAST Features and PRO perspectives to scale your brand.",
-        },
-        {
-          src: "/img/hero/slide2.jpg",
-          title1: "Sustainable",
-          title2: "Materials",
-          paragraph: "We help you choose the right eco-friendly options without sacrificing quality.",
-        },
-        {
-          src: "/img/hero/slide3.jpg",
-          title1: "From prototype",
-          title2: "to production",
-          paragraph: "Short lead times, predictable pricing, and consistent quality across batches.",
-        },
-      ]}
-    />
-  );
-}
-*/

@@ -133,7 +133,7 @@ export default function ThirdSection() {
             Contact us
           </h3>
           <p className="mt-2 text-center md:text-left text-gray-700">
-            Contact us now for customized solutions, expert insights, and fast, professional service. We’re here to help you drive success—let’s achieve it together!
+            Contact us now for customized solutions, expert insights, and fast, professional service. We&rsquo;re here to help you drive success—let&rsquo;s achieve it together!
           </p>
           <div className="mt-2 text-center md:text-left">
             <Link

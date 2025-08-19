@@ -10,7 +10,7 @@ export type HeaderSlide = {
   alt?: string;
   title1: string; // first title line
   title2: string; // second title line
-  paragraph: string; // supporting copy
+  paragraph: string; 
 };
 
 export type HeaderSliderProps = {

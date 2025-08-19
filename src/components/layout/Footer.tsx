@@ -12,7 +12,7 @@ export default function Footer() {
 
   const onSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
-    // validación simple
+    
     const ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     setStatus(ok ? "ok" : "error");
     // aquí podrías enviar a tu API /newsletter
@@ -27,7 +27,7 @@ export default function Footer() {
                 alt="Fast Pro"
                 width={140}
                 height={40}
-                className="w-[160px] h-auto"  // <- controla el tamaño final
+                className="w-[160px] h-auto"  
                 priority={false}
             />
         </div>

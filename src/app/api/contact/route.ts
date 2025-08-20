@@ -25,9 +25,13 @@ export async function POST(req: Request) {
       return NextResponse.json({ ok: false, error: "Missing RESEND_API_KEY" }, { status: 500 });
     }
 
+    // app/api/contact/route.ts (fragmento)
     const isProd = process.env.NODE_ENV === "production";
-    const to = isProd ? "info@fastprobags.com" : (process.env.CONTACT_TO || "diegocelaia@outlook.com");
-    const from = process.env.RESEND_FROM || "onboarding@resend.dev"; // en prod: no-reply@fastprobags.com
+    const to = isProd
+    ? (process.env.CONTACT_TO || "diegocelaia@outlook.com") // ← en PROD por ahora te lo mandas a ti
+    : (process.env.CONTACT_TO || "diegocelaia@outlook.com");
+    const from = process.env.RESEND_FROM || "onboarding@resend.dev";
+
 
     const resend = new Resend(apiKey);
 

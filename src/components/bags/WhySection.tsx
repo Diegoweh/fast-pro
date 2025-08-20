@@ -161,9 +161,7 @@ export default function WhySection() {
           </motion.div>
         </div>
       </div>
-    </section>
-
-    <ThirdSection />
+    </section>    
     </>
   );
 }

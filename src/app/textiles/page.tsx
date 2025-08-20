@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/accordion";
 import WhySection from '@/components/bags/WhySection';
 import { motion } from 'framer-motion';
+import ThirdSection from '@/components/home/ThirdSection';
 
 const page = () => {
   return (
@@ -154,6 +155,9 @@ const page = () => {
 
     {/* Why Section */}
     <WhySection />
+
+    {/* More */}
+    <ThirdSection />
     </>
   )
 }

@@ -35,7 +35,7 @@ const page = () => {
                 className="mb-3 md:mb-0 md:mr-4"
               >
                 <Image
-                  src="/img/home/fplogo2.svg"
+                  src="/img/home/fpLogo2.svg"
                   alt="FastPro"
                   width={80}
                   height={80}

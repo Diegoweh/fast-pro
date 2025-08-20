@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
+import { motion } from "framer-motion"
 
 const products = [
   {
@@ -62,19 +63,31 @@ const products = [
 export default function ProductCards() {
   return (
     <section className="max-w-7xl mx-auto py-10 px-3">
-      <div className="text-center mb-8">
-        <h2 className="text-2xl md:text-3xl font-semibold mb-4">Our Product Range</h2>
-        <p className="text-gray-700 max-w-2xl mx-auto">
-          Discover our comprehensive selection of FIBCs designed to meet your specific industry needs
-        </p>
-      </div>
+  {/* Header */}
+    <motion.div
+      className="text-center mb-8"
+      initial={{ y: 30, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      viewport={{ once: true }}
+    >
+      <h2 className="text-2xl md:text-3xl font-semibold mb-4">Our Product Range</h2>
+      <p className="text-gray-700 max-w-2xl mx-auto">
+        Discover our comprehensive selection of FIBCs designed to meet your specific industry needs
+      </p>
+    </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {products.map((product) => (
-          <Card
-            key={product.id}
-            className="group overflow-hidden rounded-2xl border border-gray-300 bg-white shadow-sm hover:shadow-lg transition-shadow"
-          >
+    {/* Product Grid */}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {products.map((product, i) => (
+        <motion.div
+          key={product.id}
+          initial={{ y: 40, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: i * 0.15 }}
+          viewport={{ once: true }}
+        >
+          <Card className="group overflow-hidden rounded-2xl border border-gray-300 bg-white shadow-sm hover:shadow-lg transition-shadow">
             {/* IMAGE FRAME */}
             <div
               className="
@@ -117,7 +130,10 @@ export default function ProductCards() {
               <ul className="mb-4 space-y-1">
                 {product.features.map((feature, index) => (
                   <li key={index} className="text-xs text-gray-600 flex items-center">
-                    <span className="w-1 h-1 rounded-full mr-2" style={{ backgroundColor: "#eb7700" }} />
+                    <span
+                      className="w-1 h-1 rounded-full mr-2"
+                      style={{ backgroundColor: "#eb7700" }}
+                    />
                     {feature}
                   </li>
                 ))}
@@ -134,8 +150,10 @@ export default function ProductCards() {
               </div>
             </CardContent>
           </Card>
-        ))}
-      </div>
+        </motion.div>
+      ))}
+    </div>
     </section>
+
   )
 }

@@ -1,13 +1,20 @@
-// app/components/SecondSection.tsx
+"use client";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function SecondSection() {
   return (
     <section className="max-w-7xl mx-auto py-12 md:py-5 px-3">
       {/* Jumbotron */}
-      <div className="p-3 md:p-5 mb-4 md:mb-5 rounded-3xl border shadow bg-neutral-50">
+      <motion.div
+        className="p-3 md:p-5 mb-4 md:mb-5 rounded-3xl border shadow bg-neutral-50"
+        initial={{ y: 40, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+        viewport={{ once: true }}
+      >
         <div className="py-2 md:py-3">
           <h1
             className="text-2xl md:text-3xl font-bold text-center md:text-left"
@@ -30,17 +37,22 @@ export default function SecondSection() {
             </Button>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Cards Row */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 items-stretch">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 items-stretch">
         {/* Card 1 */}
-        <div className="h-full">
+        <motion.div
+          className="h-full"
+          initial={{ x: -100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+          viewport={{ once: true }}
+        >
           <div className="h-full flex flex-col p-4 md:p-5 rounded-3xl border shadow bg-white">
-            {/* Imagen superior */}
             <div className="relative w-full h-40 md:h-48 rounded-xl overflow-hidden mb-3">
               <Image
-                src="/img/home/bagsHeader.webp"     // <--- cambia la ruta a la que uses
+                src="/img/home/bagsHeader.webp"
                 alt="Bags"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -69,42 +81,48 @@ export default function SecondSection() {
               </Button>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Card 2 */}
-        <div className="h-full">
-            <div className="h-full flex flex-col p-4 md:p-5 rounded-3xl border shadow bg-neutral-50">
+        <motion.div
+          className="h-full"
+          initial={{ x: 100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+          viewport={{ once: true }}
+        >
+          <div className="h-full flex flex-col p-4 md:p-5 rounded-3xl border shadow bg-neutral-50">
             <div className="relative w-full h-40 md:h-48 rounded-xl overflow-hidden mb-3">
               <Image
-                src="/img/home/textilesHeader.webp"     // <--- cambia la ruta a la que uses
-                alt="Bags"
+                src="/img/home/textilesHeader.webp"
+                alt="Textiles"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
               />
-            </div>            
+            </div>
+
             <h2
-                className="text-xl md:text-2xl f ont-semibold text-center md:text-left"
-                style={{ color: "#eb7700" }}
+              className="text-xl md:text-2xl font-semibold text-center md:text-left"
+              style={{ color: "#eb7700" }}
             >
-                Textiles
+              Textiles
             </h2>
             <p className="mt-2 text-center md:text-left flex-1">
-                We produce woven polypropylene textiles in-house, ensuring superior quality and reliable supply. Our vertical integration enables fast, custom solutions for demanding industrial applications.
+              We produce woven polypropylene textiles in-house, ensuring superior quality and reliable supply. Our vertical integration enables fast, custom solutions for demanding industrial applications.
             </p>
             <div className="mt-2 text-center md:text-left">
-                <Button
+              <Button
                 asChild
                 variant="outline"
                 className="border-[#1f5bd3] text-[#1f5bd3] hover:bg-[#1f5bd3] hover:text-white"
-                >
+              >
                 <Link href="/prospectives">Go to Textiles</Link>
-                </Button>
+              </Button>
             </div>
-            </div>
-        </div>
-        </div>
-
+          </div>
+        </motion.div>
+      </div>
     </section>
   );
 }

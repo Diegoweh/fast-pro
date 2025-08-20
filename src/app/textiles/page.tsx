@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react'
 
 import Image from "next/image";
@@ -8,6 +10,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import WhySection from '@/components/bags/WhySection';
+import { motion } from 'framer-motion';
 
 const page = () => {
   return (
@@ -15,8 +18,15 @@ const page = () => {
     {/* First section */}
     <section className="max-w-7xl mx-auto py-10 px-3">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {/* Left Column */}
-        <div className="p-4">
+        
+        {/* Left Column (texto + acordeón) */}
+        <motion.div
+          className="p-4"
+          initial={{ x: -80, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
+          viewport={{ once: true }}
+        >
           <h1 className="text-2xl md:text-3xl font-semibold leading-snug">
             The bags that work as hard as you do.
           </h1>
@@ -105,13 +115,19 @@ const page = () => {
               </AccordionItem>
             </Accordion>
           </div>
-        </div>
+        </motion.div>
 
-        {/* Right Column */}
-        <div className="p-4">
+        {/* Right Column (imagen + frase) */}
+        <motion.div
+          className="p-4"
+          initial={{ x: 80, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          viewport={{ once: true }}
+        >
           <div className="w-full">
             {/* Contenedor de la imagen */}
-            <div className="relative w-full h-64 md:h-[420px] rounded-t-xl  overflow-hidden">
+            <div className="relative w-full h-64 md:h-[420px] rounded-t-xl overflow-hidden">
               <Image
                 src="/img/bags/industries.webp"
                 alt="industries"
@@ -122,11 +138,17 @@ const page = () => {
             </div>
             
             {/* Frase debajo de la imagen */}
-            <div className="w-full bg-[#eb7700] text-white text-xs md:text-sm font-semibold px-3 py-2 text-center rounded-b-xl shadow">
+            <motion.div
+              className="w-full bg-[#eb7700] text-white text-xs md:text-sm font-semibold px-3 py-2 text-center rounded-b-xl shadow"
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.7, ease: "easeOut", delay: 0.4 }}
+              viewport={{ once: true }}
+            >
               FAST. STRONG. RELIABLE
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
 

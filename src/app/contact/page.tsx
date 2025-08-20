@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import Certifications from "@/components/contact/Certifications";
 
 type FormState = {
   name: string;
@@ -66,6 +67,7 @@ const page = () => {
 
 
   return (
+    <>
     <section className="py-10">
       <div className="max-w-7xl mx-auto px-3">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -203,6 +205,9 @@ const page = () => {
         </div>
       </div>
     </section>
+
+    <Certifications />
+    </>
   );
 }
 

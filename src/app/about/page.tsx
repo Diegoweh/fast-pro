@@ -1,12 +1,8 @@
+"use client";
 import React from 'react'
 import Image from "next/image";
 import AboutInfoSections from '@/components/about/AboutInfoSection';
-
-export const metadata = {
-  title: "About — FastPro",
-  description: "About Fast Pro Bags and Textiles, Inc.",
-  alternates: { canonical: "/about" },
-};
+import { motion } from 'framer-motion';
 
 const page = () => {
   return (
@@ -15,32 +11,50 @@ const page = () => {
     {/* First Section */}
     <section className="py-10">
       <div className="max-w-7xl mx-auto px-3">
+        
         {/* Header Section */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 mb-10">
           {/* Reserved column (md:3) */}
           <div className="hidden md:block md:col-span-3" />
 
           {/* Content column (md:9) */}
-          <div className="md:col-span-9">
+          <motion.div
+            className="md:col-span-9"
+            initial={{ x: -80, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
+            viewport={{ once: true }}
+          >
             <div className="flex flex-col md:flex-row items-center text-center md:text-left mb-4 py-4">
               {/* Logo */}
-              <Image
-                src="/img/home/fplogo2.svg" // ajusta si tu asset vive en otra ruta
-                alt="FastPro"
-                width={80}
-                height={80}
+              <motion.div
+                initial={{ y: 24, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
+                viewport={{ once: true }}
                 className="mb-3 md:mb-0 md:mr-4"
-                priority={false}
-              />
+              >
+                <Image
+                  src="/img/home/fplogo2.svg"
+                  alt="FastPro"
+                  width={80}
+                  height={80}
+                  priority={false}
+                />
+              </motion.div>
 
               {/* Title */}
-              <h1
+              <motion.h1
                 className="font-semibold leading-snug text-[1.5rem] md:text-[1.75rem]"
-                style={{ color: "#1a4db3" }} // mantiene el color base del heading
+                style={{ color: "#1a4db3" }}
+                initial={{ y: 20, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+                viewport={{ once: true }}
               >
                 <span
                   className="text-white px-4 py-1 inline-block"
-                  style={{ backgroundColor: "#eb7600" }} // primer bloque naranja
+                  style={{ backgroundColor: "#eb7600" }}
                 >
                   Fast. Strong. Reliable.
                 </span>
@@ -48,25 +62,45 @@ const page = () => {
                 <span className="inline-block mt-1" style={{ color: "#1a4db3" }}>
                   The bags that work as hard as you do.
                 </span>
-              </h1>
+              </motion.h1>
             </div>
 
             {/* Divider */}
-            <div className="my-6 h-px" style={{ backgroundColor: "#dee2e6" }} />
+            <motion.div
+              className="my-6 h-px"
+              style={{ backgroundColor: "#dee2e6" }}
+              initial={{ scaleX: 0, opacity: 0 }}
+              whileInView={{ scaleX: 1, opacity: 1 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+              viewport={{ once: true }}
+            />
 
             {/* Subtitle */}
-            <p className="mt-0" style={{ color: "#6c757d", fontSize: "1.2rem" }}>
+            <motion.p
+              className="mt-0"
+              style={{ color: "#6c757d", fontSize: "1.2rem" }}
+              initial={{ y: 16, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
+              viewport={{ once: true }}
+            >
               Fast Pro Bags and Textiles, Inc. is committed to delivering the same high standards of
               quality, safety, innovation, and operational efficiency that our customers have come to
               expect from us.
-            </p>
-          </div>
-        </div>
+            </motion.p>
+          </motion.div>
+        </div>        
 
         {/* Stats Section */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
           {/* 1969 */}
-          <article className="text-center">
+          <motion.article
+            className="text-center"
+            initial={{ y: 40, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
+            viewport={{ once: true }}
+          >
             <div
               className="h-full rounded-md p-6"
               style={{ border: "1px solid #dee2e6" }}
@@ -81,10 +115,16 @@ const page = () => {
                 Founded by Robert “Bob” Williamson, pioneering the FIBC industry.
               </p>
             </div>
-          </article>
+          </motion.article>
 
           {/* 2025 */}
-          <article className="text-center">
+          <motion.article
+            className="text-center"
+            initial={{ y: 40, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true }}
+          >
             <div
               className="h-full rounded-md p-6"
               style={{ border: "1px solid #dee2e6" }}
@@ -99,10 +139,16 @@ const page = () => {
                 Fast Pro Bags and Textiles Inc. rebrand and refocus of our Mexico manufacturing operations.
               </p>
             </div>
-          </article>
+          </motion.article>
 
           {/* 4 - 6 */}
-          <article className="text-center">
+          <motion.article
+            className="text-center"
+            initial={{ y: 40, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.7, ease: "easeOut", delay: 0.3 }}
+            viewport={{ once: true }}
+          >
             <div
               className="h-full rounded-md p-6"
               style={{ border: "1px solid #dee2e6" }}
@@ -118,10 +164,16 @@ const page = () => {
                 approval processes may extend this.
               </p>
             </div>
-          </article>
+          </motion.article>
 
           {/* +25 */}
-          <article className="text-center">
+          <motion.article
+            className="text-center"
+            initial={{ y: 40, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.7, ease: "easeOut", delay: 0.4 }}
+            viewport={{ once: true }}
+          >
             <div
               className="h-full rounded-md p-6"
               style={{ border: "1px solid #dee2e6" }}
@@ -136,8 +188,10 @@ const page = () => {
                 Years of Experience in Near-shore Mexico Manufacturing and Engineering Services.
               </p>
             </div>
-          </article>
+          </motion.article>
         </div>
+
+
       </div>
     </section>
 

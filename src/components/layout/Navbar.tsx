@@ -78,7 +78,7 @@ export function Navbar() {
               </DropdownMenu>
 
               <a
-                href="#"
+                href="/contact"
                 className="text-gray-700 hover:text-[#eb7700] px-3 py-2 text-md font-medium transition-colors duration-200"
               >
                 Contact
@@ -153,7 +153,7 @@ export function Navbar() {
               </div>
 
               <a
-                href="#"
+                href="/contact"
                 className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-[#eb7700] hover:bg-gray-50 rounded-md"
               >
                 Contact

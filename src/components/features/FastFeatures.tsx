@@ -10,11 +10,11 @@ const announcements = [
     description: "Official letter detailing key updates for Q2.",
     href: "/ruta/documento1.pdf",
   },
-  {
-    title: "April Tariff Statement",
-    description: "Latest statement regarding product tariffs.",
-    href: "/ruta/documento2.pdf",
-  },
+  // {
+  //   title: "April Tariff Statement",
+  //   description: "Latest statement regarding product tariffs.",
+  //   href: "/ruta/documento2.pdf",
+  // },
 ];
 
 const videos = [

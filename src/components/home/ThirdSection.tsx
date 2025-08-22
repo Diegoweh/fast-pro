@@ -91,7 +91,7 @@ export default function ThirdSection() {
           </p>
           <div className="mt-2 text-center md:text-left">
             <Link
-              href="/services"
+              href="/features"
               className="group inline-flex items-center gap-1 text-[#1a4db3] hover:underline"
               aria-label="Services"
             >

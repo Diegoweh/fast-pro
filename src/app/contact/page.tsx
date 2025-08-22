@@ -167,7 +167,7 @@ const page = () => {
                       <Link href="/services">Services</Link>
                     </DropdownMenuItem>
                     <DropdownMenuItem asChild>
-                      <Link href="/services">Other</Link>
+                      <Link href="/">Other</Link>
                     </DropdownMenuItem>
                   </DropdownMenuContent>
                 </DropdownMenu>

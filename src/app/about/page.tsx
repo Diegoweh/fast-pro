@@ -14,10 +14,24 @@ const page = () => {
         
         {/* Header Section */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 mb-10">
-          {/* Reserved column (md:3) */}
-          <div className="hidden md:block md:col-span-3" />
+          {/* Columna izquierda con la imagen */}
+          <motion.div
+            className="hidden md:flex md:col-span-3 items-center justify-center"
+            initial={{ x: -60, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
+            <Image
+              src="/img/about/plane.webp"
+              alt="History of Fast Pro"
+              width={320}
+              height={400}
+              className="rounded-lg object-contain"
+            />
+          </motion.div>
 
-          {/* Content column (md:9) */}
+          {/* Contenido derecho */}
           <motion.div
             className="md:col-span-9"
             initial={{ x: -80, opacity: 0 }}
@@ -39,7 +53,6 @@ const page = () => {
                   alt="FastPro"
                   width={80}
                   height={80}
-                  priority={false}
                 />
               </motion.div>
 
@@ -84,9 +97,9 @@ const page = () => {
               transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
               viewport={{ once: true }}
             >
-              Fast Pro Bags and Textiles, Inc. is committed to delivering the same high standards of
-              quality, safety, innovation, and operational efficiency that our customers have come to
-              expect from us.
+              Fast Pro Bags and Textiles, Inc. is committed to delivering the same high
+              standards of quality, safety, innovation, and operational efficiency that
+              our customers have come to expect from us.
             </motion.p>
           </motion.div>
         </div>        
@@ -106,8 +119,8 @@ const page = () => {
               style={{ border: "1px solid #dee2e6" }}
             >
               <div
-                className="font-bold mb-2 leading-none"
-                style={{ color: "#1a4db3", fontSize: "4rem" }}
+                className="font-bold mb-2 leading-none text-[2.5rem] sm:text-[3rem] md:text-[4rem]"
+                style={{ color: "#1a4db3" }}
               >
                 1969
               </div>
@@ -130,8 +143,8 @@ const page = () => {
               style={{ border: "1px solid #dee2e6" }}
             >
               <div
-                className="font-bold mb-2 leading-none"
-                style={{ color: "#1a4db3", fontSize: "4rem" }}
+                className="font-bold mb-2 leading-none text-[2.5rem] sm:text-[3rem] md:text-[4rem]"
+                style={{ color: "#1a4db3" }}
               >
                 2025
               </div>
@@ -154,8 +167,8 @@ const page = () => {
               style={{ border: "1px solid #dee2e6" }}
             >
               <div
-                className="font-bold mb-2 leading-none"
-                style={{ color: "#1a4db3", fontSize: "4rem" }}
+                className="font-bold mb-2 leading-none text-[2.5rem] sm:text-[3rem] md:text-[4rem]"
+                style={{ color: "#1a4db3" }}
               >
                 4 - 6
               </div>
@@ -179,8 +192,8 @@ const page = () => {
               style={{ border: "1px solid #dee2e6" }}
             >
               <div
-                className="font-bold mb-2 leading-none"
-                style={{ color: "#1a4db3", fontSize: "4rem" }}
+                className="font-bold mb-2 leading-none text-[2.5rem] sm:text-[3rem] md:text-[4rem]"
+                style={{ color: "#1a4db3" }}
               >
                 +25
               </div>

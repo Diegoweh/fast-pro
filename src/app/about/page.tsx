@@ -4,6 +4,7 @@ import Image from "next/image";
 import AboutInfoSections from '@/components/about/AboutInfoSection';
 import { motion } from 'framer-motion';
 import HeaderSlider from '@/components/layout/HeaderSlide';
+import Certifications from '@/components/contact/Certifications';
 
 const page = () => {
   return (
@@ -234,6 +235,8 @@ const page = () => {
     </section>
 
     <AboutInfoSections />
+
+    <Certifications />
     
     </>
   )

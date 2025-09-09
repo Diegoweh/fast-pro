@@ -108,7 +108,7 @@ const page = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
           {/* 1969 */}
           <motion.article
-            className="text-center"
+            className="text-center bg-orange-400 rounded shadow-md"
             initial={{ y: 40, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
@@ -124,7 +124,7 @@ const page = () => {
               >
                 1969
               </div>
-              <p className="text-gray-600 text-sm">
+              <p className="text-gray-100 text-sm">
                 Founded by Robert “Bob” Williamson, pioneering the FIBC industry.
               </p>
             </div>
@@ -132,7 +132,7 @@ const page = () => {
 
           {/* 2025 */}
           <motion.article
-            className="text-center"
+            className="text-center bg-orange-400 rounded shadow-md"
             initial={{ y: 40, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
@@ -148,7 +148,7 @@ const page = () => {
               >
                 2025
               </div>
-              <p className="text-gray-600 text-sm">
+              <p className="text-gray-100 text-sm">
                 Fast Pro Bags and Textiles Inc. rebrand and refocus of our Mexico manufacturing operations.
               </p>
             </div>
@@ -156,7 +156,7 @@ const page = () => {
 
           {/* 4 - 6 */}
           <motion.article
-            className="text-center"
+            className="text-center bg-orange-400 rounded shadow-md"
             initial={{ y: 40, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.7, ease: "easeOut", delay: 0.3 }}
@@ -172,7 +172,7 @@ const page = () => {
               >
                 4 - 6
               </div>
-              <p className="text-gray-600 text-sm">
+              <p className="text-gray-100 text-sm">
                 Standard Lead-Time for Bags and Textiles – customization, material requirements, and
                 approval processes may extend this.
               </p>
@@ -181,7 +181,7 @@ const page = () => {
 
           {/* +25 */}
           <motion.article
-            className="text-center"
+            className="text-center bg-orange-400 rounded shadow-md"
             initial={{ y: 40, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.7, ease: "easeOut", delay: 0.4 }}
@@ -197,7 +197,7 @@ const page = () => {
               >
                 +25
               </div>
-              <p className="text-gray-600 text-sm">
+              <p className="text-gray-100 text-sm">
                 Years of Experience in Near-shore Mexico Manufacturing and Engineering Services.
               </p>
             </div>

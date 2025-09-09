@@ -28,8 +28,8 @@ export default function ProPerspectives() {
     <>
     <section className="py-12 bg-gray-50">
       <div className="mx-auto max-w-7xl px-4">
-        <h2 className="mb-4 text-center text-3xl font-bold text-orange-500">
-          PRO Prospectives
+        <h2 className="mb-4 text-center text-3xl font-bold text-[#eb7700]">
+          PRO Perspectives
         </h2>
         <p className="mb-10 text-center text-gray-600">
           Technical bulletins, industry insights, and company blog posts

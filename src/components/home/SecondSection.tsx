@@ -117,7 +117,7 @@ export default function SecondSection() {
                 variant="outline"
                 className="border-[#1f5bd3] text-[#1f5bd3] hover:bg-[#1f5bd3] hover:text-white"
               >
-                <Link href="/prospectives">Go to Textiles</Link>
+                <Link href="/textiles">Go to Textiles</Link>
               </Button>
             </div>
           </div>

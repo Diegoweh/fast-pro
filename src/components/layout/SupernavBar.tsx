@@ -11,14 +11,16 @@ export default function SupernavBar() {
           <div className="flex flex-wrap md:flex-nowrap items-center mb-2 md:mb-0 px-2 md:px-0">
             <div className="flex items-center w-full flex-wrap md:flex-nowrap">
               {/* Logo */}
-              <Image
-                src="/img/home/fpLogo3.svg"
-                alt="FastPro Logo"
-                width={160}
-                height={40}
-                className="h-[30px] md:h-10 w-auto select-none"
-                priority
-              />
+              <Link href="/" passHref>
+                <Image
+                  src="/img/home/fpLogo3.svg"
+                  alt="FastPro Logo"
+                  width={160}
+                  height={40}
+                  className="h-[30px] md:h-10 w-auto select-none"
+                  priority
+                />
+              </Link>
               {/* Phone (push right on the same row) */}
               <span className="ml-auto text-[0.8rem] md:text-base">
                 <strong>Phone:</strong> +1 214-340-7060

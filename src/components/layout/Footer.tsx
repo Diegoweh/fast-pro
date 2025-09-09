@@ -22,6 +22,7 @@ export default function Footer() {
     <footer className="py-6 bg-slate-200 border-t">
       <div className="max-w-7xl mx-auto px-3">
         <div className="py-6">
+          <Link href="/" passHref>
             <Image
                 src="/img/home/fplogoBlue.svg"
                 alt="Fast Pro"
@@ -29,7 +30,8 @@ export default function Footer() {
                 height={40}
                 className="w-[160px] h-auto"  
                 priority={false}
-            />
+            /> 
+          </Link>
         </div>
         {/* Top: brand + subscribe */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -111,7 +113,7 @@ export default function Footer() {
           <nav aria-label="Footer Navigation" className="w-full md:w-auto">
             <ul className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
               <li>
-                <Link href="/home" className="text-gray-700 hover:text-[#eb7700]">
+                <Link href="/" className="text-gray-700 hover:text-[#eb7700]">
                   Home
                 </Link>
               </li>
@@ -142,7 +144,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/privacy-terms" // ajusta a tu ruta real
+                  href="/" // ajusta a tu ruta real
                   className="text-gray-700 hover:text-[#eb7700]"
                 >
                   Privacy &amp; Legal

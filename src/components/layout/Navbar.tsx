@@ -15,9 +15,9 @@ export function Navbar() {
   return (
     <nav className="bg-orange-100 shadow-md ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-end md:justify-center items-center h-16">
           {/* Logo */}
-          <div className="flex-shrink-0">
+          {/* <div className="flex-shrink-0">
             <Link href="/" className="flex-shrink-0 inline-flex items-center">
             <Image
               src="/img/home/fpLogo2.svg"
@@ -28,29 +28,35 @@ export function Navbar() {
               priority
             />
           </Link>
-          </div>
+          </div> */}
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-12 flex items-center space-x-8">
-              <a
+              <Link
                 href="/about"
                 className="text-gray-700 hover:text-[#eb7700] px-3 py-2 text-md font-medium transition-colors duration-200"
               >
                 Who we are
-              </a>
-              <a
+              </Link>
+              <Link
+                href="/services"
+                className="text-gray-700 hover:text-[#eb7700] px-3 py-2 text-md font-medium transition-colors duration-200"
+              >
+                Services
+              </Link>
+              <Link
                 href="/bags"
                 className="text-gray-700 hover:text-[#eb7700] px-3 py-2 text-md font-medium transition-colors duration-200"
               >
                 Bags
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/textiles"
                 className="text-gray-700 hover:text-[#eb7700] px-3 py-2 text-md font-medium transition-colors duration-200"
               >
                 Textiles
-              </a>
+              </Link>
 
               {/* Learn Dropdown */}
               <DropdownMenu>
@@ -60,29 +66,29 @@ export function Navbar() {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="w-48">
                   <DropdownMenuItem>
-                    <a href="/features" className="w-full text-gray-700 hover:text-[#eb7700]">
+                    <Link href="/features" className="w-full text-gray-700 hover:text-[#eb7700]">
                       FAST Features
-                    </a>
+                    </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
-                    <a href="/perspectives" className="w-full text-gray-700 hover:text-[#eb7700]">
-                      PRO perspectives
-                    </a>
+                    <Link href="/perspectives" className="w-full text-gray-700 hover:text-[#eb7700]">
+                      PRO Perspectives
+                    </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
-                    <a href="/faqs" className="w-full text-gray-700 hover:text-[#eb7700]">
+                    <Link href="/faqs" className="w-full text-gray-700 hover:text-[#eb7700]">
                       FAQs
-                    </a>
+                    </Link>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
 
-              <a
+              <Link
                 href="/contact"
                 className="text-gray-700 hover:text-[#eb7700] px-3 py-2 text-md font-medium transition-colors duration-200"
               >
                 Contact
-              </a>
+              </Link>
 
               {/* Search Button */}
               <Button
@@ -104,60 +110,67 @@ export function Navbar() {
           </div>
         </div>
 
+        
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-orange-100 border-t border-gray-200">
-              <a
+              <Link
                 href="/about"
                 className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-[#eb7700] hover:bg-gray-50 rounded-md"
               >
                 Who we are
-              </a>
-              <a
+              </Link>
+              <Link
+                href="/services"
+                className="text-gray-700 hover:text-[#eb7700] px-3 py-2 text-md font-medium transition-colors duration-200"
+              >
+                Services
+              </Link>
+              <Link
                 href="/bags"
                 className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-[#eb7700] hover:bg-gray-50 rounded-md"
               >
                 Bags
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/textiles"
                 className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-[#eb7700] hover:bg-gray-50 rounded-md"
               >
                 Textiles
-              </a>
+              </Link>
 
               {/* Mobile Learn Section */}
               <div className="px-3 py-2">
                 <div className="text-base font-medium text-gray-700 mb-2">Learn</div>
                 <div className="pl-4 space-y-1">
-                  <a
+                  <Link
                     href="/features"
                     className="block px-3 py-2 text-sm text-gray-600 hover:text-[#eb7700] hover:bg-gray-50 rounded-md"
                   >
                     FAST Features
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="/perspectives"
                     className="block px-3 py-2 text-sm text-gray-600 hover:text-[#eb7700] hover:bg-gray-50 rounded-md"
                   >
-                    PRO perspectives
-                  </a>
-                  <a
+                    PRO Perspectives
+                  </Link>
+                  <Link
                     href="/faqs"
                     className="block px-3 py-2 text-sm text-gray-600 hover:text-[#eb7700] hover:bg-gray-50 rounded-md"
                   >
                     FAQs
-                  </a>
+                  </Link>
                 </div>
               </div>
 
-              <a
+              <Link
                 href="/contact"
                 className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-[#eb7700] hover:bg-gray-50 rounded-md"
               >
                 Contact
-              </a>
+              </Link>
 
               {/* Mobile Search */}
               <div className="px-3 py-2">

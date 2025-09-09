@@ -5,48 +5,48 @@ import { motion } from "framer-motion"
 const products = [
   {
     id: 1,
-    name: "Barrel Bag",
+    name: "Two Strap Bag",
     category: "17 x 17 x 27 (H) Barrel Bag®",
     description:
       "Ideal for bulk storage and transport of dry materials.",
     price: "From $12.50",
-    image: "/img/bags/product3.webp",
+    image: "",
     features: ["Capacity: 600 lbs", "5 Cubic Feet", "30 Gallons"],
   },
   {
     id: 2,
-    name: "Waste Away Bag",
+    name: "Trash-Ton Container",
     category: "17 x 17 x 27 (H) Mini Waste Away® Drum - FIBC Tote",
     description: "Compact, drum-style FIBC for safe waste collection and transport. Durable and lightweight; supports liners and closure options to prevent spills on floors and in maintenance areas.",
     price: "From $18.75",
-    image: "/img/bags/product7.webp",
+    image: "",
     features: ["Capacity: 250 lbs", "5 Cubic Feet", "Fabric: Coated, Single Wall Stiffeners Inserted Between the Wall Panels"],
   },
   {
     id: 3,
-    name: "DeWatering Bag",
+    name: "Liquid-Solid Separator",
     category: "48 x 48 x 39 (H) DeWatering Super Sack",
     description: "High-flow dewatering FIBC engineered to separate liquids from solids. Four-panel construction in 8 oz uncoated dewatering fabric promotes rapid drainage.",
     price: "From $22.00",
-    image: "/img/bags/product5.webp",
+    image: "",
     features: ["Capacity: 3,000 lbs", "58 Cubic Feet", "Fabric: 8 oz. Uncoated DeWatering Fabric"],
   },
   {
     id: 4,
-    name: "SUPER SACK® Standard",
+    name: "Standard Four Panel Bag",
     category: "35 x 35 x 60 (H) Super Sack® Container",
     description: "Heavy-duty Super Sack® container, built with coated fabric to reduce dusting and moisture ingress.",
     price: "From $35.00",
-    image: "/img/bags/product4.webp",
+    image: "",
     features: ["Capacity: 3000 lbs", "Web Tie Closure", "Fabric: Coated"],
   },
   {
     id: 5,
-    name: "Builder's Bag",
+    name: "Constructor Bag",
     category: "35 x 35 x 35 (H) Builder's Bag",
     description: "Construction-grade Builder’s Bag.",
     price: "From $28.50",
-    image: "/img/bags/product6.webp",
+    image: "",
     features: ["SWL: 2200 lbs", "28 Cubic Feet", "Fabric: Coated"],
   },
   {
@@ -55,7 +55,7 @@ const products = [
     category: "Commodity FIBCs",
     description: "Budget-friendly option for transporting dry bulk materials like sand, gravel, and grains.",
     price: "From $8.75",
-    image: "/img/bags/product8.webp",
+    image: "",
     features: ["Budget-friendly", "Dry materials", "Construction grade"],
   },
 ]
@@ -71,7 +71,7 @@ export default function ProductCards() {
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true }}
     >
-      <h2 className="text-2xl md:text-3xl font-semibold mb-4">Our Product Range</h2>
+      <h2 className="text-2xl md:text-3xl text-[#eb7700] font-semibold mb-4">Our Product Range</h2>
       <p className="text-gray-700 max-w-2xl mx-auto">
         Discover our comprehensive selection of FIBCs designed to meet your specific industry needs
       </p>

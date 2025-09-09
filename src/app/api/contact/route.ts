@@ -1,4 +1,4 @@
-// app/api/contact/route.ts
+// app/api/contact/route.ts - Example of a contact form handler using free Resend version
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 import { isValidFrom } from "@/utils/email";
@@ -11,7 +11,7 @@ function isEmail(v: string) {
 const safe = (s: string) =>
   String(s).replace(/[<>]/g, (m) => ({ "<": "&lt;", ">": "&gt;" }[m] as string));
 
-export async function POST(req: Request) {
+export async function POST(req: Request) { 
   try {
     const { name, email, subject, message } = await req.json();
 

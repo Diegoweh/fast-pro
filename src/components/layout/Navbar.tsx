@@ -34,6 +34,12 @@ export function Navbar() {
           <div className="hidden md:block">
             <div className="ml-12 flex items-center space-x-8">
               <Link
+                href="/"
+                className="text-gray-700 hover:text-[#eb7700] px-3 py-2 text-md font-medium transition-colors duration-200"
+              >
+                Home
+              </Link>
+              <Link
                 href="/about"
                 className="text-gray-700 hover:text-[#eb7700] px-3 py-2 text-md font-medium transition-colors duration-200"
               >
@@ -116,6 +122,12 @@ export function Navbar() {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-orange-100 border-t border-gray-200">
               <Link
+                href="/"
+                className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-[#eb7700] hover:bg-gray-50 rounded-md"
+              >
+                Home
+              </Link>
+              <Link
                 href="/about"
                 className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-[#eb7700] hover:bg-gray-50 rounded-md"
               >
@@ -123,7 +135,7 @@ export function Navbar() {
               </Link>
               <Link
                 href="/services"
-                className="text-gray-700 hover:text-[#eb7700] px-3 py-2 text-md font-medium transition-colors duration-200"
+                className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-[#eb7700] hover:bg-gray-50 rounded-md"
               >
                 Services
               </Link>

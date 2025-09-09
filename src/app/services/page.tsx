@@ -1,6 +1,7 @@
 "use client";
 
 import ThirdSection from '@/components/home/ThirdSection';
+import HeaderSlider from '@/components/layout/HeaderSlide';
 import PackagingCard from '@/components/services/PackagingCard';
 import { motion } from 'framer-motion';
 import { Settings } from 'lucide-react';
@@ -112,6 +113,30 @@ const page = () => {
 
   return (
     <>
+    <HeaderSlider
+              heightClass="h-[60vh] md:h-[80vh]"
+              slides={[
+                {
+                  src: "/img/home/fpHeader.webp",
+                  alt: "Bags manufacturing",
+                  title1: "FastPro",
+                  title2: "0% tariffs",
+                  paragraph: "Our products are exempt under the United States/Mexico/Canada Agreement (USMCA) and Tratado Mexico Estados Unidos Canada (T-MEC).",
+                },
+                {
+                  src: "/img/home/fpHeader2.webp",
+                  title1: "FastPro",
+                  title2: "5 week lead times",
+                  paragraph: "Custom fit, with fast design, sampling & delivery",
+                },
+                {
+                  src: "/img/home/fpHeader3.webp",
+                  title1: "FastPro",
+                  title2: "Minutes from the US border",
+                  paragraph: "Shipping from our México Plant to the USA reduces your delivery risks and provides a cost-effective solution compared to containers from overseas.",
+                },
+              ]} />
+
     <section className="py-12 sm:py-16 lg:py-20">
       <div className="mx-auto w-full max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <header className="mx-auto max-w-2xl text-center">

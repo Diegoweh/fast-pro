@@ -206,7 +206,7 @@ const page = () => {
       </div>
     </section>
 
-    <Certifications />
+    
     </>
   );
 }

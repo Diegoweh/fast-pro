@@ -13,6 +13,7 @@ import WhySection from '@/components/bags/WhySection';
 import { motion } from 'framer-motion';
 import ThirdSection from '@/components/home/ThirdSection';
 import HeaderSlider from '@/components/layout/HeaderSlide';
+import TextilesCards from '@/components/textiles/TextilesCards';
 
 const page = () => {
   return (
@@ -182,8 +183,13 @@ const page = () => {
     {/* Why Section */}
     <WhySection />
 
+    {/* Product Cards Section */}
+    <TextilesCards />
+
     {/* More */}
     <ThirdSection />
+
+
     </>
   )
 }

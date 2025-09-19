@@ -13,6 +13,22 @@ type FormState = {
   message: string;
 };
 
+const SUBJECT_OPTIONS = [
+  "Product Inquiry – FIBCs (Bulk Bags)",
+  "Product Inquiry – Fabrics",
+  "Pricing & Quotations",
+  "Shipping & Delivery Questions",
+  "Technical Support / Product Specifications",
+  "Request for Samples",
+  "Partnership or Reseller Opportunities",
+  "Order Status",
+  "Billing & Invoicing",
+  "Quality or Warranty Issues",
+  "Feedback or Complaints",
+  "Careers / Job Opportunities",
+  "Other (Please Specify)",
+] as const;
+
 const page = () => {
   /// State for the form
     const [form, setForm] = useState<FormState>({
@@ -23,6 +39,7 @@ const page = () => {
   });
   const [status, setStatus] = useState<"idle" | "ok" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
+  const [otherSubject, setOtherSubject] = useState("");
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
@@ -33,8 +50,16 @@ const page = () => {
   setStatus("idle");
   setErrorMsg("");
 
+  // Validaciones
   const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email);
-  if (!form.name || !emailOk || !form.subject || !form.message) {
+
+  // Componer el subject final
+  const finalSubject =
+    form.subject === "Other (Please Specify)"
+      ? (otherSubject?.trim() ? `Other: ${otherSubject.trim()}` : "")
+      : form.subject;
+
+  if (!form.name || !emailOk || !finalSubject || !form.message) {
     setStatus("error");
     setErrorMsg("Please fill all fields with a valid email address.");
     return;
@@ -44,7 +69,7 @@ const page = () => {
     const res = await fetch("/api/contact", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(form),
+      body: JSON.stringify({ ...form, subject: finalSubject }), // <-- usar finalSubject
     });
 
     const text = await res.text();
@@ -57,12 +82,13 @@ const page = () => {
 
     setStatus("ok");
     setForm({ name: "", email: "", subject: "", message: "" });
+    setOtherSubject("");
   } catch (err: any) {
     setStatus("error");
     setErrorMsg(err?.message || "There was a problem sending your message.");
   }
-  
 };
+
 
 
 
@@ -115,16 +141,52 @@ const page = () => {
                 <label htmlFor="subject" className="block text-sm font-medium text-gray-700">
                   Subject
                 </label>
-                <input
-                  id="subject"
-                  name="subject"
-                  type="text"
-                  required
-                  value={form.subject}
-                  onChange={onChange}
-                  className="mt-1 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-[#1f5bd3]"
-                />
+
+                {/* Trigger del dropdown: muestra el valor actual o placeholder */}
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <Button
+                      type="button"
+                      variant="outline"
+                      className="mt-1 w-full justify-between border-gray-300 text-gray-700"
+                    >
+                      {form.subject || "Select a subject"}
+                      <span className="ml-2 opacity-60">▾</span>
+                    </Button>
+                  </DropdownMenuTrigger>
+
+                  <DropdownMenuContent className="w-[--radix-dropdown-menu-trigger-width]">
+                    {SUBJECT_OPTIONS.map((opt) => (
+                      <DropdownMenuItem
+                        key={opt}
+                        onClick={() => {
+                          setForm((f) => ({ ...f, subject: opt }));
+                          if (opt !== "Other (Please Specify)") setOtherSubject("");
+                        }}
+                        className="cursor-pointer"
+                      >
+                        {opt}
+                      </DropdownMenuItem>
+                    ))}
+                  </DropdownMenuContent>
+                </DropdownMenu>
+
+                {/* Campo adicional solo si eligen "Other" */}
+                {form.subject === "Other (Please Specify)" && (
+                  <div className="mt-2">
+                    <input
+                      id="subject"
+                      name="subject_other"
+                      type="text"
+                      placeholder="Please specify…"
+                      value={otherSubject}
+                      onChange={(e) => setOtherSubject(e.target.value)}
+                      className="w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-[#1f5bd3]"
+                    />
+                  </div>
+                )}
               </div>
+
 
               {/* Message */}
               <div>
@@ -149,28 +211,7 @@ const page = () => {
                   className="bg-[#1f5bd3] hover:bg-[#1f5bd3]/90 text-white"
                 >
                   Send
-                </Button>
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <Button variant="outline" className="border-[#1f5bd3] text-[#1f5bd3] hover:bg-[#1f5bd3] hover:text-white">
-                      Explore
-                    </Button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent align="start" className="w-44">
-                    {/* <DropdownMenuItem asChild>
-                      <Link href="/bags">FIBCs</Link>
-                    </DropdownMenuItem> */}
-                    <DropdownMenuItem asChild>
-                      <Link href="/textiles">Textiles</Link>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem asChild>
-                      <Link href="/services">Services</Link>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem asChild>
-                      <Link href="/">Other</Link>
-                    </DropdownMenuItem>
-                  </DropdownMenuContent>
-                </DropdownMenu>
+                </Button>                
                 
               </div>
 

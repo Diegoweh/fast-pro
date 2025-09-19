@@ -11,7 +11,7 @@ const products = [
     category: "17 x 17 x 27 (H) FIBC Fabrics",
     description: "Ideal for bulk storage and transport of dry materials.",
     price: "From $12.50",
-    image: "",
+    image: "/img/textiles/1.png",
     features: ["Capacity: 600 lbs", "5 Cubic Feet", "30 Gallons"],
   },
   {
@@ -21,7 +21,7 @@ const products = [
     category: "17 x 17 x 27 (H) Carpet Backing",
     description: "Compact, drum-style FIBC for safe waste collection and transport. Durable and lightweight; supports liners and closure options to prevent spills on floors and in maintenance areas.",
     price: "From $18.75",
-    image: "",
+    image: "/img/textiles/2.png",
     features: [
       "Capacity: 250 lbs",
       "5 Cubic Feet",
@@ -35,7 +35,7 @@ const products = [
     category: "48 x 48 x 39 (H) GeoTextiles",
     description: "High-flow dewatering FIBC engineered to separate liquids from solids. Four-panel construction in 8 oz uncoated dewatering fabric promotes rapid drainage.",
     price: "From $22.00",
-    image: "",
+    image: "/img/textiles/3.png",
     features: ["Capacity: 3,000 lbs", "58 Cubic Feet", "Fabric: 8 oz. Uncoated DeWatering Fabric"],
   },
   {
@@ -45,7 +45,7 @@ const products = [
     category: "35 x 35 x 60 (H) Cotton Bale",
     description: "Heavy-duty Super Sack® container, built with coated fabric to reduce dusting and moisture ingress.",
     price: "From $35.00",
-    image: "",
+    image: "/img/textiles/4.png",
     features: ["Capacity: 3000 lbs", "Web Tie Closure", "Fabric: Coated"],
   },
   {
@@ -55,7 +55,7 @@ const products = [
     category: "35 x 35 x 35 (H) Leno Fabric",
     description: "Construction-grade Builder’s Bag.",
     price: "From $28.50",
-    image: "",
+    image: "/img/textiles/5.png",
     features: ["SWL: 2200 lbs", "28 Cubic Feet", "Fabric: Coated"],
   },
   

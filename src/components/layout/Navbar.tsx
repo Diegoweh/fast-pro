@@ -11,6 +11,11 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   const toggleMenu = () => setIsOpen(!isOpen)
+  
+  const [isBagsOpen, setIsBagsOpen] = useState(false)
+
+  const [isTextilesOpen, setIsTextilesOpen] = useState(false)
+
 
   return (
     <nav className="bg-orange-100 shadow-md ">
@@ -51,18 +56,97 @@ export function Navbar() {
               >
                 Services
               </Link>
-              <Link
-                href="/bags"
-                className="text-gray-700 hover:text-[#eb7700] px-3 py-2 text-md font-medium transition-colors duration-200"
-              >
-                Bags
-              </Link>
+
+
+              <div className="flex items-center">
+                <Link
+                  href="/bags"
+                  className="text-gray-700 hover:text-[#eb7700] px-3 py-2 text-md font-medium transition-colors duration-200"
+                >
+                  Bags
+                </Link>
+
+                <DropdownMenu>
+                  <DropdownMenuTrigger className="flex items-center px-1 py-2 text-gray-700 hover:text-[#eb7700]">
+                    <ChevronDown className="h-4 w-4" />
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent className="w-56">
+                    <DropdownMenuItem>
+                      <Link href="/bags/two-strap" className="w-full text-gray-700 hover:text-[#eb7700]">
+                        Two Strap Bag
+                      </Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem>
+                      <Link href="/bags/trash-ton" className="w-full text-gray-700 hover:text-[#eb7700]">
+                        Trash-Ton Container
+                      </Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem>
+                      <Link href="/bags/liquid-solid" className="w-full text-gray-700 hover:text-[#eb7700]">
+                        Liquid-Solid Separator
+                      </Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem>
+                      <Link href="/bags/four-panel" className="w-full text-gray-700 hover:text-[#eb7700]">
+                        Standard Four Panel Bag
+                      </Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem>
+                      <Link href="/bags/construction" className="w-full text-gray-700 hover:text-[#eb7700]">
+                        Construction Bag
+                      </Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem>
+                      <Link href="/bags/commodity-fibc" className="w-full text-gray-700 hover:text-[#eb7700]">
+                        Commodity FIBC
+                      </Link>
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              </div>
+
+              <div className="flex items-center">
               <Link
                 href="/textiles"
                 className="text-gray-700 hover:text-[#eb7700] px-3 py-2 text-md font-medium transition-colors duration-200"
               >
                 Textiles
               </Link>
+
+              <DropdownMenu>
+                  <DropdownMenuTrigger className="flex items-center px-1 py-2 text-gray-700 hover:text-[#eb7700]">
+                    <ChevronDown className="h-4 w-4" />
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent className="w-56">
+                    <DropdownMenuItem>
+                      <Link href="/textiles/fibc-fabrics" className="w-full text-gray-700 hover:text-[#eb7700]">
+                        FIBC Fabrics
+                      </Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem>
+                      <Link href="/textiles/carpet-backing" className="w-full text-gray-700 hover:text-[#eb7700]">
+                        Carpet Backing
+                      </Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem>
+                      <Link href="/textiles/geotextiles" className="w-full text-gray-700 hover:text-[#eb7700]">
+                        GeoTextiles
+                      </Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem>
+                      <Link href="/textiles/cotton-bale" className="w-full text-gray-700 hover:text-[#eb7700]">
+                        Cotton Bale
+                      </Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem>
+                      <Link href="/textiles/leno-fabric" className="w-full text-gray-700 hover:text-[#eb7700]">
+                        Leno Fabric
+                      </Link>
+                    </DropdownMenuItem>                    
+                  </DropdownMenuContent>
+                </DropdownMenu>
+
+              </div>              
 
               {/* Learn Dropdown */}
               <DropdownMenu>
@@ -139,18 +223,122 @@ export function Navbar() {
               >
                 Services
               </Link>
-              <Link
-                href="/bags"
-                className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-[#eb7700] hover:bg-gray-50 rounded-md"
-              >
-                Bags
-              </Link>
-              <Link
-                href="/textiles"
-                className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-[#eb7700] hover:bg-gray-50 rounded-md"
-              >
-                Textiles
-              </Link>
+
+              {/* Mobile Bags Section */}
+              <div className="px-3 py-2">
+                <div className="flex justify-between items-center">
+                  <Link
+                    href="/bags"
+                    className="text-base font-medium text-gray-700 hover:text-[#eb7700] hover:bg-gray-50 rounded-md"
+                  >
+                    Bags
+                  </Link>
+                  {/* Botón para expandir/cerrar */}
+                  <button
+                    onClick={() => setIsBagsOpen(!isBagsOpen)}
+                    className="text-gray-700 hover:text-[#eb7700] focus:outline-none"
+                  >
+                    <ChevronDown className={`h-4 w-4 transition-transform ${isBagsOpen ? "rotate-180" : ""}`} />
+                  </button>
+                </div>
+
+                {isBagsOpen && (
+                  <div className="pl-4 mt-2 space-y-1">
+                    <Link
+                      href="/bags/two-strap"
+                      className="block px-3 py-2 text-sm text-gray-600 hover:text-[#eb7700] hover:bg-gray-50 rounded-md"
+                    >
+                      Two Strap Bag
+                    </Link>
+                    <Link
+                      href="/bags/trash-ton"
+                      className="block px-3 py-2 text-sm text-gray-600 hover:text-[#eb7700] hover:bg-gray-50 rounded-md"
+                    >
+                      Trash-Ton Container
+                    </Link>
+                    <Link
+                      href="/bags/liquid-solid"
+                      className="block px-3 py-2 text-sm text-gray-600 hover:text-[#eb7700] hover:bg-gray-50 rounded-md"
+                    >
+                      Liquid-Solid Separator
+                    </Link>
+                    <Link
+                      href="/bags/four-panel"
+                      className="block px-3 py-2 text-sm text-gray-600 hover:text-[#eb7700] hover:bg-gray-50 rounded-md"
+                    >
+                      Standard Four Panel Bag
+                    </Link>
+                    <Link
+                      href="/bags/construction"
+                      className="block px-3 py-2 text-sm text-gray-600 hover:text-[#eb7700] hover:bg-gray-50 rounded-md"
+                    >
+                      Construction Bag
+                    </Link>
+                    <Link
+                      href="/bags/commodity-fibc"
+                      className="block px-3 py-2 text-sm text-gray-600 hover:text-[#eb7700] hover:bg-gray-50 rounded-md"
+                    >
+                      Commodity FIBC
+                    </Link>
+                  </div>
+                )}
+              </div>
+
+              {/* Mobile Textiles Section */}
+              <div className="py-2">
+                <div className="flex px-3 py-2 justify-between items-center">
+                  <Link
+                    href="/textiles"
+                    className="block  text-base font-medium text-gray-700 hover:text-[#eb7700] hover:bg-gray-50 rounded-md"
+                  >
+                    Textiles
+                  </Link>
+                  {/* Botón para expandir/cerrar */}
+                  <button
+                      onClick={() => setIsTextilesOpen(!isTextilesOpen)}
+                      className="text-gray-700 hover:text-[#eb7700] focus:outline-none"
+                    >
+                      <ChevronDown className={`h-4 w-4 transition-transform ${isTextilesOpen ? "rotate-180" : ""}`} />
+                    </button>
+
+                </div>
+
+                {isTextilesOpen && (
+                  <div className="pl-4 mt-2 space-y-1">
+                    <Link
+                      href="/textiles/fibc-fabrics"
+                      className="block px-3 py-2 text-sm text-gray-600 hover:text-[#eb7700] hover:bg-gray-50 rounded-md"
+                    >
+                      FIBC Fabrics
+                    </Link>
+                    <Link
+                      href="/textiles/carpet-backing"
+                      className="block px-3 py-2 text-sm text-gray-600 hover:text-[#eb7700] hover:bg-gray-50 rounded-md"
+                    >
+                      Carpet Backing
+                    </Link>
+                    <Link
+                      href="/textiles/geotextiles"
+                      className="block px-3 py-2 text-sm text-gray-600 hover:text-[#eb7700] hover:bg-gray-50 rounded-md"
+                    >
+                      GeoTextiles
+                    </Link>
+                    <Link
+                      href="/textiles/cotton-bale"
+                      className="block px-3 py-2 text-sm text-gray-600 hover:text-[#eb7700] hover:bg-gray-50 rounded-md"
+                    >
+                      Cotton Bale
+                    </Link>
+                    <Link
+                      href="/textiles/leno-fabric"
+                      className="block px-3 py-2 text-sm text-gray-600 hover:text-[#eb7700] hover:bg-gray-50 rounded-md"
+                    >
+                      Leno Fabric
+                    </Link>                    
+                  </div>
+                )}
+
+              </div>
 
               {/* Mobile Learn Section */}
               <div className="px-3 py-2">

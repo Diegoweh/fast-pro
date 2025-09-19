@@ -33,7 +33,7 @@ export default function SecondSection() {
               variant="outline"
               className="border-[#1f5bd3] text-[#1f5bd3] hover:bg-[#1f5bd3] hover:text-white"
             >
-              <Link href="#">Get a Quote</Link>
+              <Link href="/contact">Get a Quote</Link>
             </Button>
           </div>
         </div>

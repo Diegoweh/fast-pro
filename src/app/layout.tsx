@@ -36,7 +36,7 @@ export default function RootLayout({
         
         {children}
         {/* Tawk.to Live Chat Script */}
-        <script
+        {/* <script
           dangerouslySetInnerHTML={{
             __html: `
               var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
@@ -50,7 +50,7 @@ export default function RootLayout({
               })();
             `,
           }}
-        />
+        /> */}
         <Footer />
       </body>
     </html>

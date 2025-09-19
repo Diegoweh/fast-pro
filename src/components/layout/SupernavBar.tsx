@@ -33,7 +33,7 @@ export default function SupernavBar() {
             {/* Botón e ícono a la izquierda en móvil (pero a la derecha en desktop) */}
             <div className="flex items-center gap-2 order-1 md:order-2 flex-1 md:flex-none">
               <Link
-                href="#"
+                href="/contact"
                 className="border border-white/90 text-white hover:text-[#1f5bd3] hover:border-[#1f5bd3] rounded px-2 py-1 md:px-3 md:py-1 text-[0.60rem] md:text-sm whitespace-nowrap transition-colors"
               >
                 Get a Quote

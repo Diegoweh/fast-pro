@@ -1,17 +1,21 @@
 // app/bags/[slug]/page.tsx
-import Image from "next/image"
-import Link from "next/link"
-import { notFound } from "next/navigation"
-import { textiles } from "@/lib/textiles"
+import Image from "next/image";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import type { Metadata } from "next";
+import { textiles } from "@/lib/textiles";
 
-type Props = {
-  params: { slug: string }
-}
+type RouteParams = { slug: string };
 
-// SEO por producto
-export function generateMetadata({ params }: Props) {
-  const textile = textiles.find(p => p.slug === params.slug)
-  if (!textile) return { title: "Product not found" }
+// --- SEO por producto (async con params: Promise) ---
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<RouteParams>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const textile = textiles.find((p) => p.slug === slug);
+  if (!textile) return { title: "Product not found" };
   return {
     title: `${textile.name} | Fast Pro`,
     description: textile.description,
@@ -20,23 +24,31 @@ export function generateMetadata({ params }: Props) {
       description: textile.description,
       images: [{ url: textile.image }],
     },
-  }
+  };
 }
 
-// Pre-render estático de todas las páginas
-export function generateStaticParams() {
-  return textiles.map(p => ({ slug: p.slug }))
+// --- Pre-render estático de todas las páginas ---
+export function generateStaticParams(): RouteParams[] {
+  return textiles.map((p) => ({ slug: p.slug }));
 }
 
-export default function ProductPage({ params }: Props) {
-  const textile = textiles.find(p => p.slug === params.slug)
-  if (!textile) return notFound()
+// --- Página principal (async con params: Promise) ---
+export default async function ProductPage({
+  params,
+}: {
+  params: Promise<RouteParams>;
+}) {
+  const { slug } = await params;
+  const textile = textiles.find((p) => p.slug === slug);
+  if (!textile) return notFound();
 
   return (
     <section className="max-w-6xl mx-auto px-3 py-10">
       {/* Breadcrumbs */}
       <nav className="mb-6 text-sm text-gray-600">
-        <Link href="/textiles" className="hover:text-[#eb7700]">Textiles</Link>
+        <Link href="/textiles" className="hover:text-[#eb7700]">
+          Textiles
+        </Link>
         <span className="mx-2">/</span>
         <span>{textile.name}</span>
       </nav>
@@ -56,7 +68,10 @@ export default function ProductPage({ params }: Props) {
 
         {/* Detalle */}
         <div>
-          <h1 className="text-2xl md:text-3xl font-semibold mb-2">{textile.name}</h1>
+          <h1 className="text-2xl md:text-3xl font-semibold mb-2">
+            {textile.name}
+          </h1>
+
           {/* Nuevo H2 SEO */}
           <h2 className="text-lg md:text-xl font-semibold text-gray-800 mb-2">
             {textile.category} – Key Specifications & Uses
@@ -70,7 +85,10 @@ export default function ProductPage({ params }: Props) {
           <ul className="mb-6 space-y-2">
             {textile.features.map((f, i) => (
               <li key={i} className="text-sm text-gray-700 flex items-center">
-                <span className="w-1.5 h-1.5 rounded-full mr-2" style={{ backgroundColor: "#eb7700" }} />
+                <span
+                  className="w-1.5 h-1.5 rounded-full mr-2"
+                  style={{ backgroundColor: "#eb7700" }}
+                />
                 {f}
               </li>
             ))}
@@ -89,5 +107,5 @@ export default function ProductPage({ params }: Props) {
         </div>
       </div>
     </section>
-  )
+  );
 }

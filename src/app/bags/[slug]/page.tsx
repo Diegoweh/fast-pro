@@ -1,17 +1,21 @@
 // app/bags/[slug]/page.tsx
-import Image from "next/image"
-import Link from "next/link"
-import { notFound } from "next/navigation"
-import { products } from "@/lib/products"
+import Image from "next/image";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import type { Metadata } from "next";
+import { products } from "@/lib/products";
 
-type Props = {
-  params: { slug: string }
-}
+type RouteParams = { slug: string };
 
-// SEO por producto
-export function generateMetadata({ params }: Props) {
-  const product = products.find(p => p.slug === params.slug)
-  if (!product) return { title: "Product not found" }
+// --- SEO por producto (ahora async y con params: Promise) ---
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<RouteParams>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const product = products.find((p) => p.slug === slug);
+  if (!product) return { title: "Product not found" };
   return {
     title: `${product.name} | Fast Pro`,
     description: product.description,
@@ -20,23 +24,31 @@ export function generateMetadata({ params }: Props) {
       description: product.description,
       images: [{ url: product.image }],
     },
-  }
+  };
 }
 
-// Pre-render estático de todas las páginas
-export function generateStaticParams() {
-  return products.map(p => ({ slug: p.slug }))
+// --- Pre-render estático de todas las páginas (igual que antes) ---
+export function generateStaticParams(): RouteParams[] {
+  return products.map((p) => ({ slug: p.slug }));
 }
 
-export default function ProductPage({ params }: Props) {
-  const product = products.find(p => p.slug === params.slug)
-  if (!product) return notFound()
+// --- Página (ahora async y con params: Promise) ---
+export default async function ProductPage({
+  params,
+}: {
+  params: Promise<RouteParams>;
+}) {
+  const { slug } = await params;
+  const product = products.find((p) => p.slug === slug);
+  if (!product) return notFound();
 
   return (
     <section className="max-w-6xl mx-auto px-3 py-10">
       {/* Breadcrumbs */}
       <nav className="mb-6 text-sm text-gray-600">
-        <Link href="/bags" className="hover:text-[#eb7700]">Bags</Link>
+        <Link href="/bags" className="hover:text-[#eb7700]">
+          Bags
+        </Link>
         <span className="mx-2">/</span>
         <span>{product.name}</span>
       </nav>
@@ -56,9 +68,10 @@ export default function ProductPage({ params }: Props) {
 
         {/* Detalle */}
         <div>
-          <h1 className="text-2xl md:text-3xl font-semibold mb-2">{product.name}</h1>
+          <h1 className="text-2xl md:text-3xl font-semibold mb-2">
+            {product.name}
+          </h1>
 
-          {/* Nuevo H2 SEO */}
           <h2 className="text-lg md:text-xl font-semibold text-gray-800 mb-2">
             {product.category} – Key Specifications & Uses
           </h2>
@@ -91,8 +104,7 @@ export default function ProductPage({ params }: Props) {
             </Link>
           </div>
         </div>
-
       </div>
     </section>
-  )
+  );
 }

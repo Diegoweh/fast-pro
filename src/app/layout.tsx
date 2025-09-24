@@ -29,12 +29,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
         <SupernavBar/>
         <Navbar/>
         
-        {children}
+        {/* El contenido crece y empuja el footer al fondo */}
+        <main className="flex-1">
+          {children}
+        </main>
         {/* Tawk.to Live Chat Script */}
         {/* <script
           dangerouslySetInnerHTML={{
@@ -51,6 +54,7 @@ export default function RootLayout({
             `,
           }}
         /> */}
+        
         <Footer />
       </body>
     </html>

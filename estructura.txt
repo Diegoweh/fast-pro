@@ -1,0 +1,62 @@
+.
+├── app
+│   ├── about
+│   │   └── page.tsx
+│   ├── api
+│   │   ├── contact
+│   │   └── subscribe
+│   ├── bags
+│   │   └── page.tsx
+│   ├── contact
+│   │   └── page.tsx
+│   ├── faqs
+│   │   └── page.tsx
+│   ├── favicon.ico
+│   ├── features
+│   │   └── page.tsx
+│   ├── globals.css
+│   ├── layout.tsx
+│   ├── page.tsx
+│   ├── perspectives
+│   │   └── page.tsx
+│   ├── services
+│   │   └── page.tsx
+│   └── textiles
+│       └── page.tsx
+├── components
+│   ├── about
+│   │   ├── AboutInfoSection.tsx
+│   │   └── ProductCards.tsx
+│   ├── bags
+│   │   └── WhySection.tsx
+│   ├── contact
+│   │   └── Certifications.tsx
+│   ├── features
+│   │   └── FastFeatures.tsx
+│   ├── home
+│   │   ├── FirstSection.tsx
+│   │   ├── SecondSection.tsx
+│   │   └── ThirdSection.tsx
+│   ├── layout
+│   │   ├── Footer.tsx
+│   │   ├── HeaderSlide.tsx
+│   │   ├── Navbar.tsx
+│   │   └── SupernavBar.tsx
+│   ├── perspectives
+│   │   └── ProPerspectives.tsx
+│   ├── services
+│   │   └── PackagingCard.tsx
+│   ├── textiles
+│   │   ├── TextilesCards.tsx
+│   │   └── WhySectionTextiles.tsx
+│   └── ui
+│       ├── accordion.tsx
+│       ├── button.tsx
+│       ├── card.tsx
+│       └── dropdown-menu.tsx
+├── lib
+│   └── utils.ts
+└── utils
+    └── email.ts
+
+26 directories, 34 files

@@ -7,56 +7,77 @@ const products = [
   {
     id: 1,
     name: "FIBC Fabrics",
-    slug: "/textiles/fibc-fabrics",   // 👈 agregamos ruta
-    category: "17 x 17 x 27 (H) FIBC Fabrics",
-    description: "Ideal for bulk storage and transport of dry materials.",
+    slug: "/textiles/fibc-fabrics",
+    category: "Industrial-Grade FIBC Fabrics",
+    description:
+      "Woven polypropylene fabrics engineered for the production of bulk containers. Provide durability, tensile strength, and resistance to wear—ensuring safe handling of heavy loads across industries.",
     price: "From $12.50",
     image: "/img/textiles/1.png",
-    features: ["Capacity: 600 lbs", "5 Cubic Feet", "30 Gallons"],
+    features: [
+      "High tensile strength polypropylene",
+      "Customizable GSM and weave patterns",
+      "Compatible with coated or uncoated applications",
+    ],
   },
   {
     id: 2,
     name: "Carpet Backing",
     slug: "/textiles/carpet-backing",
-    category: "17 x 17 x 27 (H) Carpet Backing",
-    description: "Compact, drum-style FIBC for safe waste collection and transport. Durable and lightweight; supports liners and closure options to prevent spills on floors and in maintenance areas.",
+    category: "Technical Textiles for Carpet Backing",
+    description:
+      "Specialized fabrics that reinforce carpets by improving dimensional stability and wear resistance. Widely used in residential, commercial, and automotive flooring applications.",
     price: "From $18.75",
     image: "/img/textiles/2.png",
     features: [
-      "Capacity: 250 lbs",
-      "5 Cubic Feet",
-      "Fabric: Coated, Single Wall Stiffeners Inserted Between the Wall Panels",
+      "Prevents carpet distortion and shrinkage",
+      "Enhances longevity and appearance retention",
+      "Available in woven and nonwoven constructions",
     ],
   },
   {
     id: 3,
     name: "GeoTextiles",
     slug: "/textiles/geotextiles",
-    category: "48 x 48 x 39 (H) GeoTextiles",
-    description: "High-flow dewatering FIBC engineered to separate liquids from solids. Four-panel construction in 8 oz uncoated dewatering fabric promotes rapid drainage.",
+    category: "Geosynthetic Woven and Nonwoven Fabrics",
+    description:
+      "Engineered textiles applied in civil engineering for soil stabilization, drainage, and erosion control. Essential for roadways, embankments, and environmental protection projects.",
     price: "From $22.00",
     image: "/img/textiles/3.png",
-    features: ["Capacity: 3,000 lbs", "58 Cubic Feet", "Fabric: 8 oz. Uncoated DeWatering Fabric"],
+    features: [
+      "High permeability and filtration capacity",
+      "Resistant to chemical and biological degradation",
+      "Supports separation, stabilization, and reinforcement",
+    ],
   },
   {
     id: 4,
     name: "Cotton Bale",
     slug: "/textiles/cotton-bale",
-    category: "35 x 35 x 60 (H) Cotton Bale",
-    description: "Heavy-duty Super Sack® container, built with coated fabric to reduce dusting and moisture ingress.",
+    category: "Cotton Bale Protection Fabrics",
+    description:
+      "Durable covering textiles designed to safeguard raw cotton during storage and transportation. Maintain fiber integrity by providing resistance to tearing, moisture, and contamination.",
     price: "From $35.00",
     image: "/img/textiles/4.png",
-    features: ["Capacity: 3000 lbs", "Web Tie Closure", "Fabric: Coated"],
+    features: [
+      "Protects cotton quality throughout supply chain",
+      "UV and moisture-resistant options available",
+      "Custom bale dimensions supported",
+    ],
   },
   {
     id: 5,
     name: "Leno Fabric",
     slug: "/textiles/leno-fabric",
-    category: "35 x 35 x 35 (H) Leno Fabric",
-    description: "Construction-grade Builder’s Bag.",
+    category: "Lightweight Leno Weave Fabrics",
+    description:
+      "Open-mesh woven textiles that combine strength with breathability. Used in agriculture, packaging, and construction for applications requiring ventilation and stability.",
     price: "From $28.50",
     image: "/img/textiles/5.png",
-    features: ["SWL: 2200 lbs", "28 Cubic Feet", "Fabric: Coated"],
+    features: [
+      "Unique cross-weave structure for added stability",
+      "Allows airflow while maintaining durability",
+      "Applications in sacks, crop protection, and scaffolding",
+    ],
   },
   
 ]

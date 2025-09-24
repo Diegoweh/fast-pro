@@ -143,12 +143,14 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/" // ajusta a tu ruta real
+                <a
+                  href="/privacy.pdf"   // asegúrate que el PDF está en /public/img/privacy.pdf
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-gray-700 hover:text-[#eb7700]"
                 >
-                  Privacy &amp; Legal
-                </Link>
+                  Privacy & Legal
+                </a>
               </li>
             </ul>
           </nav>

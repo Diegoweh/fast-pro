@@ -14,6 +14,7 @@ import { motion } from 'framer-motion';
 import ThirdSection from '@/components/home/ThirdSection';
 import HeaderSlider from '@/components/layout/HeaderSlide';
 import TextilesCards from '@/components/textiles/TextilesCards';
+import WhySectionTextiles from '@/components/textiles/WhySectionTextiles';
 
 const page = () => {
   return (
@@ -56,91 +57,71 @@ const page = () => {
           viewport={{ once: true }}
         >
           <h1 className="text-2xl md:text-3xl font-semibold leading-snug">
-            The bags that work as hard as you do.
+            The textiles that support industries worldwide.
           </h1>
 
           <h2
             className="mt-4 text-xl md:text-2xl font-semibold"
             style={{ color: "#eb7700" }}
           >
-            Choose Your Bag Type
+            Choose Your Textile Type
           </h2>
 
           <div className="mt-4">
             <Accordion type="single" collapsible defaultValue="item-1" className="w-full">
-              {/* 1. FIBCs */}
+              {/* 1. FIBC Fabrics */}
               <AccordionItem value="item-1">
-                <AccordionTrigger>Flexible Intermediate Bulk Containers (FIBCs)</AccordionTrigger>
+                <AccordionTrigger>FIBC Fabrics</AccordionTrigger>
                 <AccordionContent className="text-sm text-gray-700">
-                  Flexible Intermediate Bulk Containers (FIBCs) provide a reliable and efficient
-                  solution for a wide range of industries. Whether you’re in chemical processing,
-                  agriculture, food production, or pharmaceuticals, FIBCs offer secure, cost-effective
-                  packaging for transporting and storing bulk materials. With various designs and
-                  features—such as moisture resistance and custom sizes—FIBCs adapt to your process
-                  needs, ensuring safe handling and optimal performance across the supply chain.
+                  FIBC fabrics form the foundation for bulk packaging solutions across multiple
+                  sectors. Engineered to balance strength, durability, and flexibility, these
+                  woven textiles ensure reliable performance for transporting and storing bulk
+                  materials. Their adaptability supports a wide spectrum of industrial processes.
                 </AccordionContent>
               </AccordionItem>
 
-              {/* 2. Static Protection */}
+              {/* 2. Carpet Backing */}
               <AccordionItem value="item-2">
-                <AccordionTrigger>Static Protection FIBCs</AccordionTrigger>
+                <AccordionTrigger>Carpet Backing</AccordionTrigger>
                 <AccordionContent className="text-sm text-gray-700">
-                  Our Type C and Type D FIBCs are designed to provide effective static protection in
-                  environments where static discharge can pose a risk. These specialized bulk bags are
-                  ideal for chemicals, pharmaceuticals, agriculture, plastics, and electronics. Type C
-                  FIBCs use conductive threads that allow grounding for safe use in hazardous
-                  environments, while Type D FIBCs offer built-in antistatic properties, eliminating
-                  the need for grounding. Both options help ensure safe, efficient handling.
+                  Carpet backing textiles provide the structural support that defines stability,
+                  resilience, and long-term performance in floor coverings. Widely adopted in
+                  residential, commercial, and industrial applications, they play a critical role
+                  in the flooring supply chain.
                 </AccordionContent>
               </AccordionItem>
 
-              {/* 3. UN Certified */}
+              {/* 3. GeoTextiles */}
               <AccordionItem value="item-3">
-                <AccordionTrigger>UN Certified FIBCs</AccordionTrigger>
+                <AccordionTrigger>GeoTextiles</AccordionTrigger>
                 <AccordionContent className="text-sm text-gray-700">
-                  When transporting hazardous materials, UN Certified FIBCs provide the highest level
-                  of safety and compliance. These designs meet rigorous standards for chemicals,
-                  pharmaceuticals, and other dangerous goods. Industries such as chemicals, agriculture,
-                  mining, and petrochemicals benefit from compliant, reliable packaging for hazardous
-                  substances—keeping operations secure and aligned with regulations.
+                  GeoTextiles are essential materials in civil engineering and environmental
+                  projects. They enable soil stabilization, drainage, and erosion control,
+                  making them indispensable for infrastructure, road construction, and land
+                  reclamation projects.
                 </AccordionContent>
               </AccordionItem>
 
-              {/* 4. Filtration & DeWatering */}
+              {/* 4. Cotton Bale */}
               <AccordionItem value="item-4">
-                <AccordionTrigger>Filtration &amp; DeWatering FIBCs</AccordionTrigger>
+                <AccordionTrigger>Cotton Bale</AccordionTrigger>
                 <AccordionContent className="text-sm text-gray-700">
-                  In response to repeated requests for a solution that allows liquids to drain from
-                  mixtures of liquids and solids, we offer the “DeWatering Bulk Bag.” Crafted with a
-                  proprietary porous polypropylene (PP) fabric (airflow ~230 CFM), this FIBC enables
-                  efficient liquid drainage. Ideal for chemical processing, food production, mining,
-                  and agriculture—where separating liquids from solids is essential—this design helps
-                  improve efficiency and reduce waste.
+                  Cotton bale fabrics are designed to safeguard raw cotton during handling and
+                  storage. Their reliable construction helps preserve fiber integrity, ensuring
+                  quality is maintained throughout the supply chain from field to mill.
                 </AccordionContent>
               </AccordionItem>
 
-              {/* 5. Commodity */}
+              {/* 5. Leno Fabric */}
               <AccordionItem value="item-5">
-                <AccordionTrigger>Commodity FIBCs</AccordionTrigger>
+                <AccordionTrigger>Leno Fabric</AccordionTrigger>
                 <AccordionContent className="text-sm text-gray-700">
-                  Our commodity FIBCs offer a practical, budget-friendly option for transporting dry
-                  bulk materials—sand, gravel, grains, fertilizers, and more. Common in construction,
-                  agriculture, and recycling, these durable bags provide an efficient, straightforward
-                  solution without compromising reliability.
+                  Leno fabrics deliver strength and stability with a lightweight structure.
+                  Their unique weaving technique makes them suitable for packaging, agriculture,
+                  and other applications where ventilation and durability are equally critical.
                 </AccordionContent>
               </AccordionItem>
-
-              {/* 6. Custom */}
-              <AccordionItem value="item-6">
-                <AccordionTrigger>Custom FIBCs</AccordionTrigger>
-                <AccordionContent className="text-sm text-gray-700">
-                  When standard packaging won’t cut it, our customizable FIBCs deliver the flexibility
-                  and performance your operation demands. Tailor size, strength, discharge options,
-                  liners, and more to match your handling, storage, and transport needs—boosting
-                  efficiency, safety, and value for chemicals, agriculture, pharmaceuticals, minerals,
-                  plastics, and beyond.
-                </AccordionContent>
-              </AccordionItem>
+              
             </Accordion>
           </div>
         </motion.div>
@@ -157,7 +138,7 @@ const page = () => {
             {/* Contenedor de la imagen */}
             <div className="relative w-full h-64 md:h-[420px] rounded-t-xl overflow-hidden">
               <Image
-                src="/img/bags/industries.webp"
+                src="/img/textiles/fibc.webp"
                 alt="industries"
                 fill
                 className="object-cover"
@@ -181,7 +162,7 @@ const page = () => {
     </section>
 
     {/* Why Section */}
-    <WhySection />
+    <WhySectionTextiles />
 
     {/* Product Cards Section */}
     <TextilesCards />

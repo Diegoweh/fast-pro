@@ -100,9 +100,9 @@ const page = () => {
           {/* Formulario */}
           <div>
             <form onSubmit={onSubmit} className="space-y-4">
-              <h2 className="text-2xl font-semibold" style={{ color: "#eb7700" }}>
+              <h1 className="text-2xl font-semibold" style={{ color: "#eb7700" }}>
                 Contact us
-              </h2>
+              </h1>
 
               {/* Name */}
               <div>

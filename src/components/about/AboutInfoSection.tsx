@@ -42,10 +42,10 @@ export default function AboutInfoSections() {
             viewport={{ once: true }}
           >
             <div className="md:px-4">
-              <h5 className="text-2xl font-semibold">
+              <h2 className="text-2xl font-semibold">
                 <span style={{ color: "#1a4db3" }}>FAST:</span>
                 <span style={{ color: "#eb7700" }}> What We Do</span>
-              </h5>
+              </h2>
               <p className="mt-2 text-sm text-gray-600">
                 At Fast Pro Bags and Textiles, Inc., we don’t just provide packaging solutions—we forge strong partnerships. By truly understanding your needs, we become your trusted advisor, collaborating closely to create custom solutions that drive efficiency and aim to reduce costs. With our deep industry expertise, flexible manufacturing, and a dedicated team of engineers, we deliver high-quality bulk bags and textiles faster than anyone else. Our North American production facilities ensure you receive what you need, when you need it—reliably and efficiently. Count on us to help you meet your packaging goals with speed, precision, and exceptional value.
               </p>
@@ -72,10 +72,10 @@ export default function AboutInfoSections() {
             viewport={{ once: true }}
           >
             <div className="md:px-4">
-              <h5 className="text-2xl font-semibold">
+              <h2 className="text-2xl font-semibold">
                 <span style={{ color: "#1a4db3" }}>PRO:</span>
                 <span style={{ color: "#eb7700" }}> Who We Are</span>
-              </h5>
+              </h2>
               <p className="mt-2 text-sm text-gray-600">
                 Headquartered in Richardson, TX, Fast Pro Bags and Textiles, Inc. delivers innovative
                 packaging systems and efficient supply chain solutions tailored for the bulk bag

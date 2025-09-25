@@ -39,12 +39,12 @@ export default function WhySectionTextiles() {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h1
+            <h2
               className="mb-4 text-2xl md:text-3xl font-semibold"
               style={{ color: "#1a4db3" }}
             >
               Fast Pro Bags and Textiles, Inc
-            </h1>
+            </h2>
 
             <p className="mb-6 text-gray-700">
               We uphold consistent standards in material integrity, compliance, and
@@ -67,7 +67,7 @@ export default function WhySectionTextiles() {
                 </svg>
               </div>
               <div>
-                <h3 className="text-lg md:text-xl font-semibold">Customizable Industrial Textiles</h3>
+                <h2 className="text-lg md:text-xl font-semibold">Customizable Industrial Textiles</h2>
                 <p className="text-gray-700">
                   Configurable specs—basis weight, weave, width, coatings, and treatments—to
                   align performance with application, certification, and handling requirements.
@@ -90,7 +90,7 @@ export default function WhySectionTextiles() {
                 </svg>
               </div>
               <div>
-                <h3 className="text-lg md:text-xl font-semibold">North American Production</h3>
+                <h2 className="text-lg md:text-xl font-semibold">North American Production</h2>
                 <p className="text-gray-700">
                   Predictable lead times and logistics, with regional supply that reduces
                   transit risk and supports stable planning for textile-dependent operations.
@@ -114,7 +114,7 @@ export default function WhySectionTextiles() {
                 </svg>
               </div>
               <div>
-                <h3 className="text-lg md:text-xl font-semibold">Technical Collaboration</h3>
+                <h2 className="text-lg md:text-xl font-semibold">Technical Collaboration</h2>
                 <p className="text-gray-700">
                   Application reviews and data-driven recommendations—testing protocols, QA
                   checkpoints, and documentation—to streamline decisions and mitigate supply risk.
@@ -138,7 +138,7 @@ export default function WhySectionTextiles() {
                 </svg>
               </div>
               <div>
-                <h3 className="text-lg md:text-xl font-semibold">25+ Years in Mexico-based Textile Manufacturing</h3>
+                <h2 className="text-lg md:text-xl font-semibold">25+ Years in Mexico-based Textile Manufacturing</h2>
                 <p className="text-gray-700">
                   Decades of operational know-how in woven polypropylene and specialty fabrics,
                   continuously refining methods, compliance, and traceability for industrial use.

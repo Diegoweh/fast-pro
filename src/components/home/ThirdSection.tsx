@@ -34,9 +34,9 @@ export default function ThirdSection() {
             
           </div>
 
-        <h3 className="text-2xl font-semibold text-center md:text-left text-gray-900">
+        <h2 className="text-2xl font-semibold text-center md:text-left text-gray-900">
             Who we Are
-          </h3>
+          </h2>
           <p className="mt-2 text-center md:text-left text-gray-700">
             Headquartered in the U.S., Fast Pro Bags and Textiles, Inc. is a team of FIBC and textile specialists with manufacturing based in Mexico. We deliver expert nearshore solutions with no tariffs, providing fast, flexible support across borders and industries.
           </p>
@@ -83,9 +83,9 @@ export default function ThirdSection() {
             
           </div>
 
-          <h3 className="text-2xl font-semibold text-center md:text-left text-gray-900">
+          <h2 className="text-2xl font-semibold text-center md:text-left text-gray-900">
             Learn
-          </h3>
+          </h2>
           <p className="mt-2 text-center md:text-left text-gray-700">
             Stay up-to-date with our latest announcements, valuable perspectives, notable content, and in-depth knowledge on key topics to help you stay informed and ahead of the curve.
           </p>
@@ -129,9 +129,9 @@ export default function ThirdSection() {
             
           </div>
 
-          <h3 className="text-2xl font-semibold text-center md:text-left text-gray-900">
+          <h2 className="text-2xl font-semibold text-center md:text-left text-gray-900">
             Contact us
-          </h3>
+          </h2>
           <p className="mt-2 text-center md:text-left text-gray-700">
             Contact us now for customized solutions, expert insights, and fast, professional service. We&rsquo;re here to help you drive success—let&rsquo;s achieve it together!
           </p>

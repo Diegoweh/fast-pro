@@ -39,12 +39,12 @@ export default function WhySection() {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h1
+            <h2
               className="mb-4 text-2xl md:text-3xl font-semibold"
               style={{ color: "#1a4db3" }}
             >
               Fast Pro Bags and Textiles, Inc
-            </h1>
+            </h2>
             <p className="mb-6 text-gray-700">
               Is committed to delivering the same high standards of quality, safety, innovation, and
               operational efficiency that our customers have come to expect from us.
@@ -65,7 +65,7 @@ export default function WhySection() {
                 </svg>
               </div>
               <div>
-                <h3 className="text-lg md:text-xl font-semibold">Customizable FIBCs</h3>
+                <h2 className="text-lg md:text-xl font-semibold">Customizable FIBCs</h2>
                 <p className="text-gray-700">Tailored solutions to meet exact specifications and industry needs</p>
               </div>
             </motion.div>
@@ -85,7 +85,7 @@ export default function WhySection() {
                 </svg>
               </div>
               <div>
-                <h3 className="text-lg md:text-xl font-semibold">North American Production</h3>
+                <h2 className="text-lg md:text-xl font-semibold">North American Production</h2>
                 <p className="text-gray-700">
                   Enjoy reliable quality with reduced shipping times and costs, while minimizing downtime through faster
                   turnarounds and less dependency on overseas logistics and delays.
@@ -109,7 +109,7 @@ export default function WhySection() {
                 </svg>
               </div>
               <div>
-                <h3 className="text-lg md:text-xl font-semibold">We take the time to</h3>
+                <h2 className="text-lg md:text-xl font-semibold">We take the time to</h2>
                 <p className="text-gray-700">
                   Understand your specific needs, enabling clear communication and swift problem-solving to help you
                   achieve your supply chain goals with confidence.
@@ -133,7 +133,7 @@ export default function WhySection() {
                 </svg>
               </div>
               <div>
-                <h3 className="text-lg md:text-xl font-semibold">25+ Years of Mexico Manufacturing Experience</h3>
+                <h2 className="text-lg md:text-xl font-semibold">25+ Years of Mexico Manufacturing Experience</h2>
                 <p className="text-gray-700">
                   With over 25 years of quality bag and textile manufacturing experience in Mexico, we’ve earned our
                   place as an industry leader—continually advancing processes and best practices through innovation and

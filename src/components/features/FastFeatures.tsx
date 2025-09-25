@@ -74,7 +74,7 @@ export default function FastFeaturesPage() {
                 transition={{ duration: 0.75, ease: "easeOut", delay: i * 0.12 }}
                 viewport={{ once: true }}
               >
-                <h3 className="text-xl font-semibold text-orange-500">{a.title}</h3>
+                <h2 className="text-xl font-semibold text-orange-500">{a.title}</h2>
                 <p className="mt-2 text-gray-600">{a.description}</p>
                 <div className="mt-4">
                   <a

@@ -16,12 +16,12 @@ export default function SecondSection() {
         viewport={{ once: true }}
       >
         <div className="py-2 md:py-3">
-          <h1
+          <h2
             className="text-2xl md:text-3xl font-bold text-center md:text-left"
             style={{ color: "#eb7700" }}
           >
             Built on Pride. Powered by Quality
-          </h1>
+          </h2>
 
           <p className="mt-3 md:mt-4 text-base md:text-lg text-center md:text-left md:max-w-3xl mx-auto md:mx-0">
             At Fast Pro Bags and Textiles, Inc., we combine North American production, fast lead times, and dedicated engineering support to deliver custom FIBCs and industrial textiles that meet your exact needs. With a reputation for proven quality and a commitment to acting as your trusted advisor, we help you move faster, operate smarter, and achieve more.
@@ -60,12 +60,12 @@ export default function SecondSection() {
               />
             </div>
 
-            <h2
+            <h1
               className="text-xl md:text-2xl font-semibold text-center md:text-left"
               style={{ color: "#eb7700" }}
             >
               Bags
-            </h2>
+            </h1>
 
             <p className="mt-2 text-center md:text-left flex-1">
               As a vertically integrated FIBC manufacturer, we ensure agile production, fast delivery, and reliable expert support.
@@ -102,12 +102,12 @@ export default function SecondSection() {
               />
             </div>
 
-            <h2
+            <h1
               className="text-xl md:text-2xl font-semibold text-center md:text-left"
               style={{ color: "#eb7700" }}
             >
               Textiles
-            </h2>
+            </h1>
             <p className="mt-2 text-center md:text-left flex-1">
               We produce woven polypropylene textiles in-house, ensuring superior quality and reliable supply. Our vertical integration enables fast, custom solutions for demanding industrial applications.
             </p>

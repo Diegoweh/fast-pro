@@ -115,9 +115,9 @@ export default function HeaderSlider({
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold leading-tight">
                   {s.title1}
                 </h2>
-                <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold leading-tight text-[#eb7700] mt-0.5">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold leading-tight text-[#eb7700] mt-0.5">
                   {s.title2}
-                </h3>
+                </h2>
                 <p className="mt-2 text-sm sm:text-base md:text-lg/6 text-white/95">
                   {s.paragraph}
                 </p>

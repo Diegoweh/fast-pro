@@ -141,7 +141,7 @@ const page = () => {
       <div className="mx-auto w-full max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <header className="mx-auto max-w-2xl text-center">
           {/* Título: slide-down + fade */}
-          <motion.h2
+          <motion.h1
             className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl"
             style={{ color: "#eb7700" }}
             initial={{ y: -24, opacity: 0 }}
@@ -150,7 +150,7 @@ const page = () => {
             viewport={{ once: true, margin: "-10% 0px -10% 0px" }}
           >
             Our Services
-          </motion.h2>
+          </motion.h1>
 
           {/* Párrafo: fade-up suave */}
           <motion.p
@@ -212,7 +212,7 @@ const page = () => {
                 </motion.div>
 
                 {/* Título: slide sutil lateral */}
-                <motion.h3
+                <motion.h2
                   className="mb-2 text-lg font-semibold text-gray-900"
                   initial={{ x: 12, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
@@ -220,7 +220,7 @@ const page = () => {
                   viewport={{ once: true }}
                 >
                   {s.title}
-                </motion.h3>
+                </motion.h2>
 
                 {/* Descripción: fade-in con leve blur */}
                 <motion.p

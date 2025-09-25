@@ -26,12 +26,12 @@ export default function FirstSection({
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <h1
-            className="text-[2rem] md:text-4xl lg:text-5xl font-bold leading-tight mb-3 text-center lg:text-left"
+          <h2
+            className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight mb-3 text-center lg:text-left"
             style={{ color: "#eb7700" }}
           >
             What We Do
-          </h1>
+          </h2>
 
           <p className="text-base md:text-lg text-center lg:text-left mb-4 lg:mb-3">
             At Fast Pro Bags and Textiles, Inc., as a founder of the industry since 1969, we don&apos;t just manufacture industrial packaging, we engineer solutions. Historically trusted by industry leaders for our proven quality, dedicated technical services, engineering design &amp; support, we are your trusted partner in delivering custom FIBCs and industrial textiles. Backed by deep industry expertise, agile North American manufacturing, and a dedicated engineering team, we produce high-quality bulk bags and textiles with unmatched speed and precision. Count on us to deliver exactly what you need.

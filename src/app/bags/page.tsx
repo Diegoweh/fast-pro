@@ -55,7 +55,7 @@ const page = () => {
           viewport={{ once: true }}
         >
           <h1 className="text-2xl md:text-3xl font-semibold leading-snug">
-            The bags that work as hard as you do.
+            The bags that work as hard as you do
           </h1>
 
           <h2

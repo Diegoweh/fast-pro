@@ -144,9 +144,9 @@ export default function TextilesCards() {
               <CardContent className="p-4">
                 <div className="mb-2">
                   <Link href={product.slug}>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-1 hover:text-[#eb7700] transition-colors">
+                    <h2 className="text-lg font-semibold text-gray-900 mb-1 hover:text-[#eb7700] transition-colors">
                       {product.name}
-                    </h3>
+                    </h2>
                   </Link>
                   <p className="text-xs font-medium" style={{ color: "#eb7700" }}>
                     {product.category}

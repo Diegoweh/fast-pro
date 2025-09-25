@@ -15,7 +15,7 @@ const page = () => {
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true }}
       >
-        <h2 className="text-2xl md:text-3xl font-semibold mb-4">Frequently Asked Questions</h2>
+        <h1 className="text-2xl md:text-3xl font-semibold mb-4">Frequently Asked Questions</h1>
         <p className="text-gray-700 max-w-2xl mx-auto">
           Get answers to common questions about our FIBC products and services
         </p>
@@ -85,7 +85,7 @@ const page = () => {
         viewport={{ once: true }}
       >
         <div className="bg-gray-50 rounded-xl p-8 max-w-2xl mx-auto">
-          <h3 className="text-xl font-semibold mb-3">Still have questions?</h3>
+          <h2 className="text-xl font-semibold mb-3">Still have questions?</h2>
           <p className="text-gray-700 mb-6">
             Our technical team is ready to help you find the perfect FIBC solution for your needs.
           </p>
